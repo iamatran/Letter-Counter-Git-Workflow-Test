@@ -1,6 +1,11 @@
+#added refactor to separate input
+def getInputPhrase():
+    return input("Enter phrase: ").lower()
+
+
 def main():
     print("This will count the # of vowels in your phrase")
-    inputPhrase = input("Enter phrase: ").lower()
+    inputPhrase = getInputPhrase()
 
     totalVowels = 0
     for character in inputPhrase:
@@ -11,5 +16,4 @@ def main():
 
 if __name__ == "__main__":
     main()
-
 
