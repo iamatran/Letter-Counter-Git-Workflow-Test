@@ -2,15 +2,19 @@
 def getInputPhrase():
     return input("Enter phrase: ").lower()
 
+def getVowelCount(phrase):
+    vowelCount = 0
+    for character in phrase:
+        if character in ['a', 'e', 'i', 'o', 'u']:
+            vowelCount = vowelCount + 1
+    return vowelCount
+
 
 def main():
     print("This will count the # of vowels in your phrase")
     inputPhrase = getInputPhrase()
 
-    totalVowels = 0
-    for character in inputPhrase:
-        if character in ['a', 'e', 'i', 'o', 'u']:
-            totalVowels = totalVowels + 1
+    totalVowels = getVowelCount(inputPhrase)
 
     print("Total vowels: {}".format(totalVowels))
 
