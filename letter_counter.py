@@ -4,7 +4,7 @@ def getInputPhrase():
 
 def getTotalOccurrencesOfLettersToCount(phrase, lettersToCount):
     totalOccurrences = 0
-    for character in lettersToCount:
+    for character in phrase:
         if character in lettersToCount:
             totalOccurrences = totalOccurrences + 1
     return totalOccurrences
